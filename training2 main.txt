@@ -1,0 +1,230 @@
+
+[#Field : default]
+	
+	Add		: Tooltip	: $$DescName
+	
+[#Form: SalesColor]
+ 
+	Option 			: Training_Fo  : @@IsSales 
+	
+
+[!Form: Training_Fo] 
+	
+	Delete			: Print			:  Printed Invoice
+	Add 			: print 		:  Training_R_2
+ 
+[Report: Training_R_2]
+
+	Title			: "M-"	
+	Use				: Printed Invoice
+	Delete			: Form
+	Add				: Form		: Training_Fo_2
+	Object			: Voucher	: ##VoucherID
+	Set 			: SVPrintOrientation: $$SysName:Portrai
+	
+[Form: Training_Fo_2]
+	
+	Top Part : Top_Part_P1,Top_Part_P2,
+	Part	 : Mid_Part_P1
+	Bottom Part:Bottom_Part_P1,Bottom_Part_P2
+	
+[Part: Top_Part_P1]
+	
+	Right Part:Top_RPart_P1
+	Left Part :Top_LPart_P1
+	
+[Part: Top_Part_P2]
+	
+	Right Part:Top_RPart_P2
+	Left Part :Top_LPart_P2
+	
+
+		
+[Part: Top_RPart_P1]
+	
+	Height	 : 20 % Page
+	Width    : 20 % Page
+	Border	 : thin box
+	Line	 : Part_P1_L1
+	
+[Line: Part_P1_L1]
+	
+	Space Top: 5
+	Field	 : Top_Part_RP1_Fi1
+		
+[Field: Top_Part_RP1_Fi1]
+	
+	Set as	 : "Part 1"
+	Align	 : Center
+	Full Width	: Yes
+	
+
+[Part: Top_LPart_P1]
+	
+	Height	 : 20 % Page
+	Width    : 80 % Page
+	Border	 : thin box
+	Line	 : Part_LP1_L1
+	
+[Line: Part_LP1_L1]
+	
+	Space Top: 5
+	Field	 : Top_Part_LP1_Fi1
+	
+[Field: Top_Part_LP1_Fi1]
+	
+	Set as	 : "Part 2"
+	Align	 : Center
+	Full Width	: Yes
+	
+[Part: Top_RPart_P2]
+	
+	Height	: 20 % Page
+	Width	: 50 % Page
+	Border	: thin box
+	Line	: Part_RP2_L1
+	
+[Line: Part_RP2_L1]
+	
+	Space Top: 5
+	Field    : Top_Part_RP2_Fi1
+	
+[Field: Top_Part_RP2_Fi1]
+	
+	Set as	: "Part 3"
+	Align	: Center
+	Full Width	: Yes
+	
+[Part: Top_LPart_P2]
+	
+	Height	: 20 % Page
+	Width	: 50 % page
+	Border	: thin box
+	Line	: Part_LP2_L1
+	
+[Line: Part_LP2_L1]
+	
+	Space Top: 5
+	Field    : Top_Part_LP2_Fi1
+	
+[Field: Top_Part_LP2_Fi1]
+	
+	Set as	: "Part 3.1"
+	Align	: Center
+	Full Width	: Yes
+	
+
+[Part: Mid_Part_P1]
+	
+	Height	  : 50  % Page
+	Width     : 100 % Page
+	Border    : thin box
+	Line	  : Mid_part_P1_L1	
+	Common Border: Yes
+	
+[Line:  Mid_part_P1_L1	]
+	
+	Space Top : 5
+	Field     : /*Mid_Part_P1_Fi1,*/ Mid_Part_P1_Fi1,Mid_Part_P1_Fi2,Mid_Part_P1_Fi3,Mid_Part_P1_Fi4
+	
+
+
+;[Line: part_P1_L1]
+;	
+;	Space Top : 5
+;	Field     : Mid_Part_P1_Fi1,Mid_Part_P1_Fi2,Mid_Part_P1_Fi3,Mid_Part_P1_Fi4
+;	
+[Field: Mid_Part_P1_Fi1]
+	
+	Set as	  : "F 1"
+	Align	  :	Center
+	Full Width: Yes
+	Border	  : thin right
+	
+[Field: Mid_Part_P1_Fi2]
+	
+	Set as	  : "F 2"
+	Align	  :	Center
+	Full Width: Yes
+	Border	  :	thin right
+	
+[Field: Mid_Part_P1_Fi3]
+	
+	Set as   : "F 3"
+	Align    : Center
+	Full Width: Yes
+	Border   : thin right
+	
+[Field: Mid_Part_P1_Fi4]
+	
+	Set as	: "F 4"
+	Align	: Center
+	Full Width: Yes
+	Border	: thin right
+	
+[Part: Bottom_Part_P1]
+	
+	Right Part:Bottom_RPart_P1
+	Left Part :Bottom_LPart_P1
+	
+[Part: Bottom_RPart_P1]
+	
+	Height	  : 20 % Page
+	Width	  :	20 % Page
+	Border	  :	thin box
+	Line	  :	Bottom_Part_RP_L1
+	
+[Line: Bottom_Part_RP_L1]
+	
+	Space Top : 5
+	Field	  : Bottom_Part_RP_Fi1
+	
+[Field: Bottom_Part_RP_Fi1]
+	
+	Set as   : "Part 4"
+	Align    : Center
+	Full Width: Yes
+	
+[Part:Bottom_LPart_P1]
+	
+	Height	 : 20 % Page
+	Width	 : 80 % Page
+	Border	 : thin box
+	Line	 : Bottom_Part_LP_L1
+	
+[Line:Bottom_Part_LP_L1]
+	
+	Space Top: 5
+	Field    : Bottom_Part_LP_Fi1
+	
+[Field:Bottom_Part_LP_Fi1]
+	
+	Set as	 : "Part 5"
+	Align    : Center
+	Full Width: Yes
+	
+[Part:Bottom_Part_P2]
+	
+	Height	 : 20 % Page
+	Width    : 100 % Page
+	Border   : thin box
+	Line	 : Bottom_Part_L1
+	
+[Line:Bottom_Part_L1]
+	
+	Space Top: 5
+	Field	 : Bottom_Part_Fi1
+	
+[Field: Bottom_Part_Fi1]
+	
+	Set as	: "part 6"
+	Align	: Center
+	Full Width: Yes
+
+
+
+
+	
+
+	
+	
