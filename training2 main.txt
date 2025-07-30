@@ -91,7 +91,7 @@
 	
 [Field: Top_Part_RP2_Fi1]
 	
-	Set as	: "Part 3"
+	Set as	: "Part 1s3"
 	Align	: Center
 	Full Width	: Yes
 	
